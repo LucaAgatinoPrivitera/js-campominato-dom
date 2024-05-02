@@ -12,28 +12,25 @@ let setSenzaDuplicati = [];
 let i = 1;
 for (i; i <= 16; i++) {
     singolaBomba = Math.floor(Math.random() * 100);
+
+
     bombe[i] = singolaBomba;
+
     setSenzaDuplicati = new Set(bombe);
 }
 
-
-
-
-
-
-
-
+/*
 function generaNumeriSenzaDuplicati() {
     let numeri = [];
     while (numeri.length < 16) {
-        let nuovoNumero = Math.floor(Math.random() * 100) + 1; // Genera un numero casuale da 1 a 100
+        let nuovoNumero = Math.floor(Math.random() * 101); // Genera un numero casuale da 1 a 100
         if (numeri.indexOf(nuovoNumero) === -1) { // Verifica se il numero non è già presente nell'array
             numeri.push(nuovoNumero); // Aggiunge il numero all'array se non è duplicato
         }
     }
     return numeri;
 }
-
+*/
 let arrayNumeri = generaNumeriSenzaDuplicati();
 console.log(arrayNumeri);
 
@@ -170,3 +167,30 @@ function creaQuadrato(i) {
     //return così viene conservato
     return quadrato;
 }
+
+
+
+
+
+
+
+
+
+function generaNumeriSenzaDuplicati() {
+    let numeri = [];
+    while (numeri.length < 16) {
+        let nuovoNumero = Math.floor(Math.random() * 101); // Genera un numero casuale da 1 a 100
+        if (numeri.indexOf(nuovoNumero) === -1) { // Verifica se il numero non è già presente nell'array
+            numeri.push(nuovoNumero); // Aggiunge il numero all'array se non è duplicato
+        }
+    }
+    return numeri;
+}
+
+
+/*
+for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    
+}
+*/
