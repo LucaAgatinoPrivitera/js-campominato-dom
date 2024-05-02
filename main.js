@@ -208,3 +208,18 @@ for (let i = 0; i < array.length; i++) {
     
 }
 */
+
+
+
+let punteggio=0;
+
+while(nonbomba){
+    punteggio++;
+}
+if(controllocella == bomba){
+    alert("Sei finito")
+}
+
+if (punteggio == 30){
+    alert("hai vinto")
+}
