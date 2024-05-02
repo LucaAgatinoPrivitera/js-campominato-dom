@@ -23,9 +23,9 @@ All'avvio della partita abbiamo bisogno di generare una lista di celle contenent
     devono essere un numero, che rappresenti una cella esistente (es. tra 1 e 100)
 Ragionate bene sul da farsi. Potete anche testare una funzioncina in un file separato o in console.
 Potete pensare a un ciclo che finchè non raggiunge lo scopo (16 bombe) continua a:
-generare numeri casuali
-controllare se sono già nella lista di bombe
-aggiungere il numero alla lista o ignorarlo, a seconda del caso
+    generare numeri casuali
+    controllare se sono già nella lista di bombe
+    aggiungere il numero alla lista o ignorarlo, a seconda del caso
 
 MILESTONE #2: CONTROLLARE LE CELLE
 Al click su una cella dovremmo controllare se QUELLA cella è inclusa nell'elenco di bombe. In baso al caso aggiungiamo coloriamo la cella di azzurro o di rosso.
@@ -49,3 +49,6 @@ Quando generate la griglia userete un numero di celle che dipende dalla difficol
     Medium: 81 celle (9x9)
     Hard: 49 (7x7)
 Ragionate bene su QUANDO vi serve conoscere la selezione dell'utente: è in quel momento che dovrete recuperare il dato.
+
+Da chiedere:
+    Tutto
