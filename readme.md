@@ -52,3 +52,5 @@ Ragionate bene su QUANDO vi serve conoscere la selezione dell'utente: è in quel
 
 Da chiedere:
     Tutto
+    Verso riga 60 avevo provato a fixare, ma non riesco ad entrare nel quadrato
+    

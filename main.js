@@ -18,6 +18,7 @@ for (i; i <= 16; i++) {
 
     setSenzaDuplicati = new Set(bombe);
 }
+console.log(setSenzaDuplicati)
 
 /*
 function generaNumeriSenzaDuplicati() {
@@ -47,18 +48,36 @@ console.log(arrayNumeri);
 
 
 
-
 //Al click abbiamo la versione facile
 button.addEventListener("click", function () {
     griglia.classList.remove("grid", "grid_med", "grid_hard");
     griglia.classList.add("grid");
     griglia.innerHTML = " ";
+    let arrayNumeriBoom = [];
+    let i=0;
 
     // griglia.innerHTML("ciao"); non mi funziona
-    for (let i = 1; i < 101; i++) {
+    for (i = 1; i < 101; i++) {
+        let prova =0;
         let quadrato = creaQuadrato(i); //in questo caso quadrato non va in conflitto a causa dello scope
         griglia.append(quadrato);  //Serve ad aggiungere il quadrato creato, altrimenti viene creato e rimane in un altro mondo
+        console.log(i);
+        console.log (typeof quadrato)
+
+
+        quadratoString=JSON.stringify(quadrato);
+        arrayNumeriProva=JSON.stringify(arrayNumeri);
+        console.log(quadratoString + "ciaoooooo")
+
+        
+        if (quadratoString == arrayNumeriProva){
+            console.log("uguale")
+        }
+        else{
+            console.log("non uguale")
+        }
     }
+
 });
 
 //Al click abbiamo la versione medium
@@ -167,11 +186,6 @@ function creaQuadrato(i) {
     //return così viene conservato
     return quadrato;
 }
-
-
-
-
-
 
 
 
