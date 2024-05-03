@@ -10,7 +10,9 @@ let griglia = document.querySelector(".grid");
 let bombe = [];
 let setSenzaDuplicati = [];
 let i = 1;
-for (i; i <= 16; i++) {
+
+//da approfondire in caso
+/*for (i; i <= 16; i++) {
     singolaBomba = Math.floor(Math.random() * 100);
 
 
@@ -19,66 +21,51 @@ for (i; i <= 16; i++) {
     setSenzaDuplicati = new Set(bombe);
 }
 console.log(setSenzaDuplicati)
+*/
 
-/*
 function generaNumeriSenzaDuplicati() {
     let numeri = [];
     while (numeri.length < 16) {
         let nuovoNumero = Math.floor(Math.random() * 101); // Genera un numero casuale da 1 a 100
         if (numeri.indexOf(nuovoNumero) === -1) { // Verifica se il numero non è già presente nell'array
+        /* if (!numeri.includes(nuovoNumero)); //Funziona ugualmente */
             numeri.push(nuovoNumero); // Aggiunge il numero all'array se non è duplicato
         }
     }
     return numeri;
 }
-*/
+
 let arrayNumeri = generaNumeriSenzaDuplicati();
 console.log(arrayNumeri);
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+let quadrati=[];
 //Al click abbiamo la versione facile
 button.addEventListener("click", function () {
     griglia.classList.remove("grid", "grid_med", "grid_hard");
     griglia.classList.add("grid");
     griglia.innerHTML = " ";
-    let arrayNumeriBoom = [];
     let i=0;
 
     // griglia.innerHTML("ciao"); non mi funziona
     for (i = 1; i < 101; i++) {
-        let prova =0;
         let quadrato = creaQuadrato(i); //in questo caso quadrato non va in conflitto a causa dello scope
         griglia.append(quadrato);  //Serve ad aggiungere il quadrato creato, altrimenti viene creato e rimane in un altro mondo
-        console.log(i);
-        console.log (typeof quadrato)
-
-
-        quadratoString=JSON.stringify(quadrato);
-        arrayNumeriProva=JSON.stringify(arrayNumeri);
-        console.log(quadratoString + "ciaoooooo")
-
-        
-        if (quadratoString == arrayNumeriProva){
-            console.log("uguale")
-        }
-        else{
-            console.log("non uguale")
-        }
+        quadrati.push(quadrato);
     }
 
 });
+
+
+
+
+
+
+
+
+
 
 //Al click abbiamo la versione medium
 buttonMed.addEventListener("click", function () {
@@ -174,6 +161,14 @@ function creaQuadrato(i) {
     // Event-listener click
     quadrato.addEventListener("click", function () {
         console.log("cliccato", this); //this indica proprio questo elemento i+1 ovviamente indica il numero dopo sul log
+
+        if(arrayNumeri.includes(i)){// così tiene conto se la i è inclusa nell'array delle bombe
+            console.log("si")
+        }
+        else{
+            console.log("no grazie")
+        }
+
         this.classList.toggle("clicked");
         if (quadrato.innerText == i) {
             quadrato.innerText = "";
@@ -210,6 +205,7 @@ for (let i = 0; i < array.length; i++) {
 */
 
 
+/*
 
 let punteggio=0;
 
@@ -223,3 +219,4 @@ if(controllocella == bomba){
 if (punteggio == 30){
     alert("hai vinto")
 }
+*/
